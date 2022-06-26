@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/regireview" method="post">
+  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+  <input type="hidden" th:name="username" th:value="${_csrf.token}" />
+
+  <input type="text" name="rev_title" placeholder="제목을 입력해주세요">
+  <input type="text" name="place" placeholder="여행지를 입력해주세요">
+  <select name="tag" placeholder="성별을 골라주세요">
+    <option value="">태그</option>
+    <option value="식도락">식도락</option>
+    <option value="관광">관광</option>
+  </select>
+  <
+  <input type="text" name="content" placeholder="내용을 입력해주세요.">
+  <button type="submit">등록</button>
+</form>
+
+</body>
+</html>
